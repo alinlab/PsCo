@@ -129,38 +129,6 @@ def evaluate_fewshot(model, loader, metric):
     return accuracies.mean(), accuracies.std()*1.96/math.sqrt(accuracies.numel())
 
 
-def get_projector(dim_in):
-    mlp = []
-    for l in range(2):
-        dim1 = dim_in if l == 0 else 4096
-        dim2 = 256 if l == 1 else 4096
-
-        mlp.append(nn.Linear(dim1, dim2, bias=False))
-
-        if l < 1:
-            mlp.append(nn.BatchNorm1d(dim2))
-            mlp.append(nn.ReLU(inplace=True))
-        else:
-            mlp.append(nn.BatchNorm1d(dim2, affine=False))
-
-    return nn.Sequential(*mlp)
-
-
-def get_predictor():
-    mlp = []
-    for l in range(2):
-        dim1 = 256 if l == 0 else 4096
-        dim2 = 256 if l == 1 else 4096
-
-        mlp.append(nn.Linear(dim1, dim2, bias=False))
-
-        if l < 1:
-            mlp.append(nn.BatchNorm1d(dim2))
-            mlp.append(nn.ReLU(inplace=True))
-
-    return nn.Sequential(*mlp)
-
-
 def evaluate_fewshot_ft_supcon(model, loader, n_iters=50):
     device = idist.device()
 
