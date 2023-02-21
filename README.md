@@ -2,7 +2,7 @@
 
 PyTorch implementation for "Unsupervised Meta-learning via Few-shot Pseudo-supervised Contrastive Learning" (accepted Spotlight presentation in ICLR 2023)
 
-<img width="80%" src="https://user-images.githubusercontent.com/69646951/220236285-73966fae-da69-4416-b088-b6373df9373e.png"/>
+<img width="100%" src="https://user-images.githubusercontent.com/69646951/220236285-73966fae-da69-4416-b088-b6373df9373e.png"/>
 
 **TL;DR:** Constructing online pseudo-tasks via momentum representations and applying contrastive learning improves the pseudo-labeling strategy progressively for meta-learning.
 
