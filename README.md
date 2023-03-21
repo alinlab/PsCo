@@ -16,6 +16,11 @@ conda install ignite -c pytorch
 pip install packaging tensorboard sklearn
 ```
 
+Download datasets
+- [omniglot](https://github.com/brendenlake/omniglot/tree/master/python): `images_background.zip` and `images_evaluation.zip`
+- [miniimagenet](https://lyy.mpi-inf.mpg.de/mtl/download/)
+- [cross-domain](https://github.com/sungnyun/understanding-cdfsl)
+
 ## Meta-Training PsCo
 
 ### Omniglot
