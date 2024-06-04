@@ -21,6 +21,7 @@ Download datasets
 - [miniimagenet](https://lyy.mpi-inf.mpg.de/mtl/download/)
 - [cross-domain](https://github.com/sungnyun/understanding-cdfsl)
 
+
 ## Meta-Training PsCo
 
 ### Omniglot
@@ -36,6 +37,7 @@ python train.py --model psco --backbone conv5 --prediction --num-shots 4 \
     --dataset miniimagenet --datadir DATADIR \
     --logdir logs/miniimagenet/psco
 ```
+
 
 ## Meta-Testing PsCo
 
